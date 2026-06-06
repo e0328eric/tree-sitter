@@ -184,7 +184,7 @@ fn addParser(b: *std.Build, lib: *std.Build.Step.Compile, comptime lang: []const
 }
 
 fn exists(b: *std.Build, path: []const u8) bool {
-    std.Io.Dir.cwd().access(b.graph.io, b.pathFromRoot(path), .{ .read = true }) catch return false;
+    b.root.access(b.graph.io, path, .{ .read = true }) catch return false;
     return true;
 }
 
