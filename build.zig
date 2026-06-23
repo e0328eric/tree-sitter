@@ -34,7 +34,7 @@ pub fn build(b: *std.Build) void {
         .{ "bash", null },
         .{ "cmake", null },
         .{ "c", null },
-        .{ "c3", null},
+        .{ "c3", null },
         .{ "comment", null },
         .{ "commonlisp", null },
         .{ "cpp", null },
@@ -184,7 +184,7 @@ fn addParser(b: *std.Build, lib: *std.Build.Step.Compile, comptime lang: []const
 }
 
 fn exists(b: *std.Build, path: []const u8) bool {
-    b.root.access(b.graph.io, path, .{ .read = true }) catch return false;
+    std.Io.Dir.cwd().access(b.graph.io, b.pathFromRoot(path), .{ .read = true }) catch return false;
     return true;
 }
 
