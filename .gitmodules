@@ -357,3 +357,6 @@
 [submodule "tree-sitter-vue"]
 	path = tree-sitter-vue
 	url = https://github.com/tree-sitter-grammars/tree-sitter-vue
+[submodule "tree-sitter-vesti"]
+	path = tree-sitter-vesti
+	url = https://github.com/e0328eric/tree-sitter-vesti.git

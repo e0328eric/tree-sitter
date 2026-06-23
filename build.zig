@@ -112,6 +112,7 @@ pub fn build(b: *std.Build) void {
         .{ "typst", null },
         .{ "uxntal", null },
         .{ "v", "tree_sitter_v" },
+        .{ "vesti", null },
         .{ "vim", null },
         .{ "vue", null },
         .{ "wikitext", null },
